@@ -1,0 +1,16 @@
+* "simulator" "HSPICE" 
+* "version" "K-2015.06-SP1 linux64"
+* "format" "HSP"
+* "rundate" "16:28:20 11/15/2016 "
+* "netlist" "hw4_p3b.sp "
+* "runtitle" ".title hw4_p3a"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ vd =   1.8000        
++ vdd =   1.8000        
++ vg = 832.0000m       
+***   END: Saved Operating Point ***                     

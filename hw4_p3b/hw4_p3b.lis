@@ -1,0 +1,428 @@
+Using: /usr/local/apps/synopsys/current_hspice/hspice/linux64/hspice  'hw4_p3b.sp' :
+ ****** HSPICE -- K-2015.06-SP1 linux64 (Aug 23 2015) ******                    
+  Copyright (c) 1986 - 2016 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: hw4_p3b.sp                                                        
+  Command line options: /usr/local/apps/synopsys/current_hspice/hspice/linux64/hspice hw4_p3b.sp :
+ lic:  
+ lic: FLEXlm: v11.2.1 
+ lic: USER:   morriluk             HOSTNAME: dear119-18.engr.oregonstate.edu 
+ lic: HOSTID: dc4a3e6cf835         PID:      8365 
+ lic: Using FLEXlm license file: 
+ lic: 7188@linlic.engr.oregonstate.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 11-jul-2017/2016.06 
+ lic: 3(in_use)/50(total) FLOATING license(s) on SERVER 7188@linlic.engr.oregonstate.edu 
+ lic:   
+ Init: read install configuration file: /usr/local/apps/synopsys/current_hspice/hspice/meta.cfg
+1****** HSPICE -- K-2015.06-SP1 linux64 (Aug 23 2015) ******                    
+ ******  
+ .title hw4_p3a
+
+ ****** mos   model parameters tnom=  25.000 temp=  25.000 ******
+ ***************************************************************************
+ ***        model parameters  model name:   0:p_18     model type:pmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+      hspver=    2006.03               level=         49         
+     version=        3.1            paramchk=          0         
+      apwarn=          1                lite=          0         
+      vgslim=          0             binUnit=          1         
+      capMod=          2               xpart=        0.5         
+      mobMod=          1              nqsMod=          0         
+      stiMod=          0                 elm=          5         
+    sfvtflag=          0                 tox=    4.1e-09 meter   
+          xj=      1e-07 meter       binflag=          0         
+        lmin=          0 meter          lmax=          0 meter   
+        wmin=          0 meter          wmax=          0 meter   
+        lref=          0 meter          wref=          0 meter   
+        lint=2.40594e-08 meter          wint=          0 meter   
+       lmult=          1               wmult=          1         
+          ll=          0                 lln=          1         
+          lw=          0                 lwn=          1         
+         lwl=          0                  wl=          0         
+         wln=          1                  ww=          0         
+         wwn=          1                 wwl=          0         
+         dwg=-4.41769e-08 m/V             dwb=6.97017e-09 m/V^1/2 
+          xl=          0                  xw=     -1e-08         
+          a0=    1.84138                 ags=   0.400689 V^-1    
+          b0=7.65708e-07 meter            b1=2.52826e-06 meter   
+        keta=  0.0145743 V^-1           voff= -0.0984894 V       
+       ngate=          0 cm^-3           vbx=          0 V       
+         vbm=         -3 V                xt=   1.55e-07 meter   
+        vth0=  -0.404077 V               nch= 4.1589e+17 cm^-3   
+        nsub=      6e+16 cm^-3           nlx=1.06879e-07 meter   
+      gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+          k1=   0.583367 V^1/2            k2=  0.0301169         
+          k3=          0                 k3b=    16.2021 V^-1    
+          w0=      1e-06 meter          dvt0=   0.556918         
+        dvt1=   0.246075                dvt2=        0.1 V^-1    
+       dvt0w=          0 meter^-1      dvt1w=          0 meter^-1
+       dvt2w=          0 V^-1           dsub=    1.02253         
+        eta0=   0.152158                etab=  -0.099095 V^-1    
+          u0=    116.046 cm^2/V/sec         ua=1.55704e-09 m/V     
+          ub=      1e-21 (m/V)^2          uc=     -1e-10 V^-1    
+        vsat=     199463 m/sec            a1=   0.373167 v^-1    
+          a2=        0.3               delta=       0.01 V       
+        rdsw=    287.511 ohm-um         prwg=        0.5 V^-1    
+        prwb=  -0.135487 V^-1/2           wr=          1         
+        pclm=     2.1661             pdiblc1=3.20891e-05         
+     pdiblc2=  0.0164807             pdiblcb=     -0.001 V^-1    
+      pscbe1=9.01974e+09 V/m          pscbe2=2.60511e-09 V/m     
+       drout=          0                pvag=         15         
+     nfactor=     1.8964                cdsc=    0.00024 f/m^2   
+       cdscb=          0 f/V/m^2       cdscd=          0 f/V/m^2 
+         cit=          0 f/m^2        alpha0=          0 m/V     
+       beta0=         30 V               dlc=2.40594e-08 meter   
+         dwc=          0 meter           clc=      1e-07 meter   
+         cle=        0.6                cgso=   5.75e-10 f/m     
+        cgdo=   5.75e-10 f/m            cgbo=      1e-12 f/m     
+        cgsl=          0 f/m            cgdl=          0 f/m     
+      ckappa=        0.6                  cf=          0 f/m     
+        tnom=     300.15 K               kt1=      -0.11 V       
+        kt1l=          0                 kt2=      0.022         
+         ute=       -1.5                 ua1=   4.31e-09 m/V     
+         ub1=  -7.61e-18 (m/V)^2         uc1=   -5.6e-11 m/V^2   
+          at=      33000 m/s             prt=          0         
+         using Berkeley noise model       noiMod=          1         
+        noia=    9.9e+18                noib=       2400         
+        noic=    1.4e-12                  em=    4.1e+07         
+          ef=          1                  af=          1         
+          kf=          0              gdsnoi=-1.23457e-29         
+         using Hspice diodes            using ACM 
+         acm=         0                 hdif=         0 meter    
+        ldif=         0 meter             js=         0 amp/m^2  
+         jsw=         0 amp/m            xti=         0          
+           n=         1                   cj=0.00116394 f/m^2    
+          mj=  0.419416                   pb=  0.865987 V        
+        cjsw=1.65613e-10 f/m             mjsw=  0.368302          
+         php=  0.865987 V               pbsw (not used)           
+      cjgate=1.65613e-10 f/m            cjswg (not used)           
+       mjswg (not used)                 pbswg (not used)           
+       lketa=-0.00294233               wketa=  0.0266507         
+       pketa=-0.00367958               pvth0= 0.00185699         
+         pk2= 0.00155429               peta0=0.000100316         
+         pu0=    -1.1074                 pua=-4.96912e-11         
+         pub=      1e-21               pvsat=        -50         
+       prdsw=   -1.14585         
+ 
+
+  **warning** (hw4_p3b.sp:27) Unable to find referenced node m1; Output variable ignored. Specify a valid node.
+  **warning** (hw4_p3b.sp:27) .print/.probe statement contains unused output; the unused output is ignored.
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+ ******
+ .title hw4_p3a
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+ x
+
+ volt         current   
+             m1         
+    0.       -950.4775u 
+   10.00000m -950.0779u 
+   20.00000m -949.6773u 
+   30.00000m -949.2755u 
+   40.00000m -948.8728u 
+   50.00000m -948.4689u 
+   60.00000m -948.0639u 
+   70.00000m -947.6578u 
+   80.00000m -947.2506u 
+   90.00000m -946.8422u 
+  100.00000m -946.4326u 
+  110.00000m -946.0219u 
+  120.00000m -945.6099u 
+  130.00000m -945.1967u 
+  140.00000m -944.7822u 
+  150.00000m -944.3665u 
+  160.00000m -943.9495u 
+  170.00000m -943.5311u 
+  180.00000m -943.1114u 
+  190.00000m -942.6904u 
+  200.00000m -942.2680u 
+  210.00000m -941.8442u 
+  220.00000m -941.4189u 
+  230.00000m -940.9922u 
+  240.00000m -940.5640u 
+  250.00000m -940.1343u 
+  260.00000m -939.7031u 
+  270.00000m -939.2703u 
+  280.00000m -938.8360u 
+  290.00000m -938.4000u 
+  300.00000m -937.9624u 
+  310.00000m -937.5231u 
+  320.00000m -937.0821u 
+  330.00000m -936.6394u 
+  340.00000m -936.1949u 
+  350.00000m -935.7486u 
+  360.00000m -935.3005u 
+  370.00000m -934.8505u 
+  380.00000m -934.3986u 
+  390.00000m -933.9448u 
+  400.00000m -933.4891u 
+  410.00000m -933.0313u 
+  420.00000m -932.5714u 
+  430.00000m -932.1095u 
+  440.00000m -931.6455u 
+  450.00000m -931.1792u 
+  460.00000m -930.7108u 
+  470.00000m -930.2401u 
+  480.00000m -929.7671u 
+  490.00000m -929.2918u 
+  500.00000m -928.8141u 
+  510.00000m -928.3339u 
+  520.00000m -927.8512u 
+  530.00000m -927.3660u 
+  540.00000m -926.8781u 
+  550.00000m -926.3876u 
+  560.00000m -925.8944u 
+  570.00000m -925.3985u 
+  580.00000m -924.8996u 
+  590.00000m -924.3979u 
+  600.00000m -923.8933u 
+  610.00000m -923.3856u 
+  620.00000m -922.8748u 
+  630.00000m -922.3608u 
+  640.00000m -921.8437u 
+  650.00000m -921.3232u 
+  660.00000m -920.7993u 
+  670.00000m -920.2719u 
+  680.00000m -919.7410u 
+  690.00000m -919.2065u 
+  700.00000m -918.6682u 
+  710.00000m -918.1262u 
+  720.00000m -917.5802u 
+  730.00000m -917.0302u 
+  740.00000m -916.4761u 
+  750.00000m -915.9179u 
+  760.00000m -915.3552u 
+  770.00000m -914.7882u 
+  780.00000m -914.2166u 
+  790.00000m -913.6404u 
+  800.00000m -913.0593u 
+  810.00000m -912.4734u 
+  820.00000m -911.8824u 
+  830.00000m -911.2861u 
+  840.00000m -910.6846u 
+  850.00000m -910.0775u 
+  860.00000m -909.4648u 
+  870.00000m -908.8462u 
+  880.00000m -908.2217u 
+  890.00000m -907.5910u 
+  900.00000m -906.9538u 
+  910.00000m -906.3102u 
+  920.00000m -905.6597u 
+  930.00000m -905.0022u 
+  940.00000m -904.3375u 
+  950.00000m -903.6653u 
+  960.00000m -902.9854u 
+  970.00000m -902.2975u 
+  980.00000m -901.6013u 
+  990.00000m -900.8965u 
+    1.00000  -900.1828u 
+    1.01000  -899.4598u 
+    1.02000  -898.7272u 
+    1.03000  -897.9845u 
+    1.04000  -897.2315u 
+    1.05000  -896.4676u 
+    1.06000  -895.6923u 
+    1.07000  -894.9051u 
+    1.08000  -894.1055u 
+    1.09000  -893.2929u 
+    1.10000  -892.4665u 
+    1.11000  -891.6257u 
+    1.12000  -890.7697u 
+    1.13000  -889.8976u 
+    1.14000  -889.0085u 
+    1.15000  -888.1011u 
+    1.16000  -887.1745u 
+    1.17000  -886.2271u 
+    1.18000  -885.2575u 
+    1.19000  -884.2639u 
+    1.20000  -883.2443u 
+    1.21000  -882.1966u 
+    1.22000  -881.1179u 
+    1.23000  -880.0054u 
+    1.24000  -878.8553u 
+    1.25000  -877.6636u 
+    1.26000  -876.4252u 
+    1.27000  -875.1342u 
+    1.28000  -873.7836u 
+    1.29000  -872.3648u 
+    1.30000  -870.8678u 
+    1.31000  -869.2802u 
+    1.32000  -867.5871u 
+    1.33000  -865.7708u 
+    1.34000  -863.8095u 
+    1.35000  -861.6776u 
+    1.36000  -859.3444u 
+    1.37000  -856.7741u 
+    1.38000  -853.9252u 
+    1.39000  -850.7506u 
+    1.40000  -847.1980u 
+    1.41000  -843.2110u 
+    1.42000  -838.7301u 
+    1.43000  -833.6946u 
+    1.44000  -828.0447u 
+    1.45000  -821.7227u 
+    1.46000  -814.6749u 
+    1.47000  -806.8528u 
+    1.48000  -798.2131u 
+    1.49000  -788.7185u 
+    1.50000  -778.3369u 
+    1.51000  -767.0413u 
+    1.52000  -754.8092u 
+    1.53000  -741.6220u 
+    1.54000  -727.4642u 
+    1.55000  -712.3231u 
+    1.56000  -696.1883u 
+    1.57000  -679.0511u 
+    1.58000  -660.9043u 
+    1.59000  -641.7421u 
+    1.60000  -621.5594u 
+    1.61000  -600.3522u 
+    1.62000  -578.1169u 
+    1.63000  -554.8505u 
+    1.64000  -530.5506u 
+    1.65000  -505.2150u 
+    1.66000  -478.8417u 
+    1.67000  -451.4291u 
+    1.68000  -422.9758u 
+    1.69000  -393.4805u 
+    1.70000  -362.9421u 
+    1.71000  -331.3596u 
+    1.72000  -298.7319u 
+    1.73000  -265.0584u 
+    1.74000  -230.3382u 
+    1.75000  -194.5706u 
+    1.76000  -157.7549u 
+    1.77000  -119.8906u 
+    1.78000   -80.9770u 
+    1.79000   -41.0137u 
+    1.80000     0.      
+y
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- K-2015.06-SP1 linux64 (Aug 23 2015) ******                    
+ ******  
+ .title hw4_p3a
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:vd      =   1.8000  0:vdd     =   1.8000  0:vg      = 832.0000m
+
+
+ **** voltage sources
+
+ subckt                                   
+ element  0:v1       0:v2       0:vin     
+  volts      1.8000     1.8000   832.0000m
+  current  8.674e-19    0.         0.     
+  power     -1.5613a    0.         0.     
+
+     total voltage source power dissipation=   -1.5613a       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt             
+ element  0:m1      
+ model    0:p_18    
+ region       Linear
+  id         0.     
+  ibs        0.     
+  ibd        0.     
+  vgs     -968.0000m
+  vds        0.     
+  vbs        0.     
+  vth     -455.4569m
+  vdsat   -393.2340m
+  vod     -512.5431m
+  beta       8.5356m
+  gam eff  526.4894m
+  gm         0.     
+  gds        4.1539m
+  gmb        0.     
+  cdtot    697.3741p
+  cgtot    298.1728f
+  cstot    697.3130p
+  cbtot      1.3945n
+  cgs      162.7251f
+  cgd      140.3224f
+
+
+
+
+          ***** job concluded
+1****** HSPICE -- K-2015.06-SP1 linux64 (Aug 23 2015) ******                    
+ ******  
+ .title hw4_p3a
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E3-1230 v5 @ 3.40GHz
+ cpu MHz	: 2233.906
+  
+ OS:
+ Linux version 3.10.0-327.28.3.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) ) #1 SMP Thu Aug 18 19:05:49 UTC 2016
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       4 # elements   =       4
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       3
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       1 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           3
+  dc sweep           0.00         181         363
+  readin             0.01
+  errchk             0.00
+  setup              0.01
+  output             0.00
+
+
+           peak memory used        207.43 megabytes
+           total cpu time            0.02 seconds
+           total elapsed time        0.05 seconds
+           job started at     16:28:20 11/15/2016
+           job ended   at     16:28:21 11/15/2016
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.03(s)

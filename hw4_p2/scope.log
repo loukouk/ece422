@@ -1,0 +1,128 @@
+Mdi:ArrangeIcons
+wm geometry . 900x785+-57+77
+Mdi:ArrangeIcons
+wm geometry . 900x785+-80+77
+Mdi:ArrangeIcons
+wm geometry . 900x785+-126+77
+Mdi:ArrangeIcons
+wm geometry . 900x785+-172+77
+Mdi:ArrangeIcons
+wm geometry . 900x785+-218+77
+Mdi:ArrangeIcons
+wm geometry . 900x785+-270+77
+Mdi:ArrangeIcons
+wm geometry . 900x785+-334+77
+Mdi:ArrangeIcons
+wm geometry . 900x785+-406+77
+Mdi:ArrangeIcons
+wm geometry . 900x785+-476+80
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+86
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+92
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+94
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+97
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+100
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+104
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+108
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+111
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+114
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+119
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+123
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+129
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+132
+Mdi:ArrangeIcons
+wm geometry . 900x785+-484+133
+Mdi:ArrangeIcons
+wm geometry . 960x1070+0+28
+ScopeSigMgr:loadpffile /nfs/stak/students/m/morriluk/ece422/hw4_p2/hw4_p2.ac0 1 openonly
+# PF:1
+pf:read PF:1 v(vout)
+# WF:1:1
+Graph addsignal {WF:1:1 WF:1:1} -region {new new} -yview {cphasedeg(y) db(y)} -xview {real(x) real(x)} -tracehi {2 2}
+# Signal0 Signal1
+Graph:DSel
+Graph:Select Graph0
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph:DSel
+Graph axisconfig AxisX(0) -logticks {2 1} -subticks 0 -rang {1.0 10g} -gridvis n -label f(Hz) -scale log -unitscale auto
+.frame1.mdi.mdi1.work.graph0 save -file /nfs/stak/students/m/morriluk/ece422/hw4_p2/ac_gain.png -format png  -x 0 -y 0 -w 488 -h 368 -colormode color
+ScopeSigMgr:loadpffile /nfs/stak/students/m/morriluk/ece422/hw4_p2/hw4_p2.sw0 1 openonly
+# PF:2
+wm geometry .sigmgr._PF:2 231x341+970+620
+wm geometry .sigmgr._PF:2 231x341+951+615
+wm geometry .sigmgr._PF:2 231x341+932+610
+wm geometry .sigmgr._PF:2 231x341+892+598
+wm geometry .sigmgr._PF:2 231x341+846+584
+wm geometry .sigmgr._PF:2 231x341+777+563
+wm geometry .sigmgr._PF:2 231x341+737+549
+wm geometry .sigmgr._PF:2 231x341+718+537
+wm geometry .sigmgr._PF:2 231x341+693+530
+wm geometry .sigmgr._PF:2 231x341+681+526
+wm geometry .sigmgr._PF:2 231x341+675+523
+wm geometry .sigmgr._PF:2 231x341+672+521
+wm geometry .sigmgr._PF:2 231x341+669+520
+wm geometry .sigmgr._PF:2 231x341+666+517
+wm geometry .sigmgr._PF:2 231x341+663+515
+wm geometry .sigmgr._PF:2 231x341+660+513
+wm geometry .sigmgr._PF:2 231x341+654+510
+wm geometry .sigmgr._PF:2 231x341+644+508
+wm geometry .sigmgr._PF:2 231x341+626+504
+wm geometry .sigmgr._PF:2 231x341+605+502
+wm geometry .sigmgr._PF:2 231x341+593+502
+wm geometry .sigmgr._PF:2 231x341+591+502
+wm geometry .sigmgr._PF:2 231x341+590+503
+GrXY:NewGraph
+# Graph1
+pf:read PF:2 gmo(m1)
+# WF:2:1
+Graph addsignal WF:2:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+Graph:DSel
+Graph:Select Graph1
+Graph:DSel
+Graph:DSel
+Graph:SetCMap 2
+Graph:DSel
+Graph:Select Graph1
+Graph:DSel
+Graph itemselect AxisY(0,0) add
+# AxisY(0,0)
+Graph:DSel
+Graph axisconfig AxisY(0,0) -linticks 1m -subticks 0 -rang {0.0 4.0m} -gridvis n -label (LX) -scale lin -unitscale auto
+.frame1.mdi.mdi2.work.graph1 save -file /nfs/stak/students/m/morriluk/ece422/hw4_p2/gm_vs_vin.png -format png  -x 0 -y 0 -w 488 -h 368 -colormode color
+GrXY:NewGraph
+# Graph2
+pf:read PF:2 i(m1)
+# WF:2:2
+Graph addsignal WF:2:2 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+Graph:DSel
+Graph:Select Graph2
+Graph:SetCMap 2
+Graph:DSel
+.frame1.mdi.mdi3.work.graph2 save -file /nfs/stak/students/m/morriluk/ece422/hw4_p2/ids_vs_vin.png -format png  -x 0 -y 0 -w 488 -h 368 -colormode color
+GrXY:NewGraph
+# Graph3
+pf:read PF:2 v(vout)
+# WF:2:3
+Graph addsignal WF:2:3 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+Graph:SetCMap 2
+Graph:DSel
+Graph:Select Graph3
+Graph:DSel
+.frame1.mdi.mdi4.work.graph3 save -file /nfs/stak/students/m/morriluk/ece422/hw4_p2/vout_vs_vin.png -format png  -x 0 -y 0 -w 488 -h 368 -colormode color

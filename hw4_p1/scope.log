@@ -1,0 +1,177 @@
+Mdi:ArrangeIcons
+Mdi:ArrangeIcons
+wm geometry . 900x785+69+68
+Mdi:ArrangeIcons
+wm geometry . 900x785+107+68
+Mdi:ArrangeIcons
+wm geometry . 900x785+149+73
+Mdi:ArrangeIcons
+wm geometry . 900x785+187+77
+Mdi:ArrangeIcons
+wm geometry . 900x785+219+79
+Mdi:ArrangeIcons
+wm geometry . 900x785+243+83
+Mdi:ArrangeIcons
+wm geometry . 900x785+259+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+267+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+272+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+273+85
+ScopeSigMgr:loadpffile /nfs/stak/students/m/morriluk/ece422/hw4_p1/hw4_p1.sw0 1 openonly
+# PF:1
+Mdi:ArrangeIcons
+wm geometry . 900x785+269+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+264+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+233+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+183+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+109+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+21+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+-71+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+-210+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+-302+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+-382+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+85
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+89
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+91
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+93
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+95
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+97
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+98
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+100
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+102
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+107
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+114
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+110
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+106
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+104
+Mdi:ArrangeIcons
+wm geometry . 900x785+-388+102
+Mdi:ArrangeIcons
+wm geometry . 960x1070+0+28
+GrXY:NewGraph
+# Graph1
+pf:read PF:1 v(vout)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+Graph:SetCMap 2
+Graph:DSel
+Graph:Select Graph1
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph itemselect AxisX(0) add
+Graph itemselect AxisX(0) add
+Graph:DSel
+.frame1.mdi.mdi2.work.graph1 save -file /nfs/stak/students/m/morriluk/ece422/hw4_p1/vout_vs_vin.png -format png  -x 0 -y 0 -w 488 -h 368 -colormode color
+GrXY:NewGraph
+# Graph2
+pf:read PF:1 i(m1)
+# WF:1:2
+Graph addsignal WF:1:2 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+Graph:SetCMap 2
+Graph:DSel
+Graph:Select Graph2
+Graph:DSel
+Graph:DSel
+Graph:DSel
+.frame1.mdi.mdi3.work.graph2 save -file /nfs/stak/students/m/morriluk/ece422/hw4_p1/ids_vs_vin.png -format png  -x 0 -y 0 -w 488 -h 368 -colormode color
+GrXY:NewGraph
+# Graph3
+pf:read PF:1 gmo(m1)
+# WF:1:3
+Graph addsignal WF:1:3 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+Graph:SetCMap 2
+Graph:DSel
+Graph:Select Graph3
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+.frame1.mdi.mdi4.work.graph3 save -file /nfs/stak/students/m/morriluk/ece422/hw4_p1/gm_vs_vin.png -format png  -x 0 -y 0 -w 488 -h 368 -colormode color
+ScopeSigMgr:loadpffile /nfs/stak/students/m/morriluk/ece422/hw4_p1/hw4_p1.ac0 1 openonly
+# PF:2
+GrXY:NewGraph
+# Graph4
+pf:read PF:2 v(vout)
+# WF:2:1
+Graph addsignal {WF:2:1 WF:2:1} -region {new new} -yview {cphasedeg(y) db(y)} -xview {real(x) real(x)} -tracehi {2 2}
+# Signal0 Signal1
+Graph:DSel
+Graph:Select Graph4
+Graph:SetCMap 2
+Graph:DSel
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph axisconfig AxisX(0) -gridvis yes
+Graph axisconfig AxisX(0) -scale log -gridvis no -linticks {} -logticks {1 1} -subticks 8 -label f(Hz) -digiview {} -lock no -slider no -range {1.0 1g} -unitscale auto
+Graph itemselect AxisX(0) add
+Graph itemselect AxisX(0) add
+Graph:DSel
+Graph axisconfig AxisX(0) -logticks {1 2} -subticks 0 -rang {1.0 10g} -gridvis n -label f(Hz) -scale log -unitscale auto
+Graph axisconfig AxisX(0) -logticks {1 1} -subticks 0 -rang {1.0 10g} -gridvis n -label f(Hz) -scale log -unitscale auto
+Graph axisconfig AxisX(0) -logticks {2 1} -subticks 0 -rang {1.0 10g} -gridvis n -label f(Hz) -scale log -unitscale auto
+Graph:DSel
+Graph:Select Graph4
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+Graph:DSel
+GrXY:NewGraph
+# Graph5
+pf:read PF:2 v(vout)
+# WF:2:1
+Graph addsignal {WF:2:1 WF:2:1} -region {new new} -yview {cphasedeg(y) db(y)} -xview {real(x) real(x)} -tracehi {2 2}
+# Signal0 Signal1
+Graph:DSel
+Graph:Select Graph5
+Graph:SetCMap 2
+Graph:DSel
+Graph itemselect AxisX(0) add
+# AxisX(0)
+Graph:DSel
+Graph axisconfig AxisX(0) -logticks {2 1} -subticks 0 -rang {1.0 10g} -gridvis n -label f(Hz) -scale log -unitscale auto
+.frame1.mdi.mdi6.work.graph5 save -file /nfs/stak/students/m/morriluk/ece422/hw4_p1/ac_gain.png -format png  -x 0 -y 0 -w 488 -h 368 -colormode color
+wm geometry .sigmgr 376x204+797+211

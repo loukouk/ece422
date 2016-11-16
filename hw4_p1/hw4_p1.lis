@@ -1,0 +1,622 @@
+Using: /usr/local/apps/synopsys/current_hspice/hspice/linux64/hspice  'hw4_p1.sp' :
+ ****** HSPICE -- K-2015.06-SP1 linux64 (Aug 23 2015) ******                    
+  Copyright (c) 1986 - 2016 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: hw4_p1.sp                                                         
+  Command line options: /usr/local/apps/synopsys/current_hspice/hspice/linux64/hspice hw4_p1.sp :
+ lic:  
+ lic: FLEXlm: v11.2.1 
+ lic: USER:   morriluk             HOSTNAME: dear119-18.engr.oregonstate.edu 
+ lic: HOSTID: dc4a3e6cf835         PID:      6930 
+ lic: Using FLEXlm license file: 
+ lic: 7188@linlic.engr.oregonstate.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 11-jul-2017/2016.06 
+ lic: 3(in_use)/50(total) FLOATING license(s) on SERVER 7188@linlic.engr.oregonstate.edu 
+ lic:   
+ Init: read install configuration file: /usr/local/apps/synopsys/current_hspice/hspice/meta.cfg
+1****** HSPICE -- K-2015.06-SP1 linux64 (Aug 23 2015) ******                    
+ ******  
+ .title hw4_p1
+
+ ****** mos   model parameters tnom=  25.000 temp=  25.000 ******
+ ***************************************************************************
+ ***        model parameters  model name:   0:n_18     model type:nmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+      hspver=    2006.03               level=         49         
+     version=        3.1            paramchk=          0         
+      apwarn=          1                lite=          0         
+      vgslim=          0             binUnit=          1         
+      capMod=          2               xpart=        0.5         
+      mobMod=          1              nqsMod=          0         
+      stiMod=          0                 elm=          5         
+    sfvtflag=          0                 tox=    4.1e-09 meter   
+          xj=      1e-07 meter       binflag=          0         
+        lmin=          0 meter          lmax=          0 meter   
+        wmin=          0 meter          wmax=          0 meter   
+        lref=          0 meter          wref=          0 meter   
+        lint=7.65986e-09 meter          wint=          0 meter   
+       lmult=          1               wmult=          1         
+          ll=          0                 lln=          1         
+          lw=          0                 lwn=          1         
+         lwl=          0                  wl=          0         
+         wln=          1                  ww=          0         
+         wwn=          1                 wwl=          0         
+         dwg=-1.17694e-08 m/V             dwb=1.96583e-08 m/V^1/2 
+          xl=          0                  xw=     -1e-08         
+          a0=          2                 ags=   0.428182 V^-1    
+          b0=-4.43566e-09 meter            b1=     -1e-07 meter   
+        keta=-0.00873409 V^-1           voff= -0.0909514 V       
+       ngate=          0 cm^-3           vbx=          0 V       
+         vbm=         -3 V                xt=   1.55e-07 meter   
+        vth0=   0.376033 V               nch= 2.3549e+17 cm^-3   
+        nsub=      6e+16 cm^-3           nlx=1.83658e-07 meter   
+      gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+          k1=   0.598252 V^1/2            k2= 0.00204285         
+          k3=      0.001                 k3b=    5.47338 V^-1    
+          w0=      1e-07 meter          dvt0=    1.38283         
+        dvt1=   0.374633                dvt2=  0.0524724 V^-1    
+       dvt0w=          0 meter^-1      dvt1w=          0 meter^-1
+       dvt2w=          0 V^-1           dsub= 0.00880778         
+        eta0=  0.0029649                etab=9.02839e-05 V^-1    
+          u0=    265.099 cm^2/V/sec         ua=-1.34288e-09 m/V     
+          ub=2.21876e-18 (m/V)^2          uc=5.30227e-11 V^-1    
+        vsat=      99674 m/sec            a1=0.000117788 v^-1    
+          a2=          1               delta=       0.01 V       
+        rdsw=        150 ohm-um         prwg=        0.5 V^-1    
+        prwb=       -0.2 V^-1/2           wr=          1         
+        pclm=   0.739383             pdiblc1=   0.240506         
+     pdiblc2= 0.00238467             pdiblcb=       -0.1 V^-1    
+      pscbe1=2.25061e+09 V/m          pscbe2=5.50405e-09 V/m     
+       drout=   0.810147                pvag= 0.00820885         
+     nfactor=    2.47421                cdsc=    0.00024 f/m^2   
+       cdscb=          0 f/V/m^2       cdscd=          0 f/V/m^2 
+         cit=          0 f/m^2        alpha0=          0 m/V     
+       beta0=         30 V               dlc=7.65986e-09 meter   
+         dwc=          0 meter           clc=      1e-07 meter   
+         cle=        0.6                cgso=   7.68e-10 f/m     
+        cgdo=   7.68e-10 f/m            cgbo=      1e-12 f/m     
+        cgsl=          0 f/m            cgdl=          0 f/m     
+      ckappa=        0.6                  cf=          0 f/m     
+        tnom=     300.15 K               kt1=      -0.11 V       
+        kt1l=          0                 kt2=      0.022         
+         ute=       -1.5                 ua1=   4.31e-09 m/V     
+         ub1=  -7.61e-18 (m/V)^2         uc1=   -5.6e-11 m/V^2   
+          at=      33000 m/s             prt=          0         
+         using Berkeley noise model       noiMod=          1         
+        noia=      1e+20                noib=      50000         
+        noic=   -1.4e-12                  em=    4.1e+07         
+          ef=          1                  af=          1         
+          kf=          0              gdsnoi=-1.23457e-29         
+         using Hspice diodes            using ACM 
+         acm=         0                 hdif=         0 meter    
+        ldif=         0 meter             js=         0 amp/m^2  
+         jsw=         0 amp/m            xti=         0          
+           n=         1                   cj=0.00096236 f/m^2    
+          mj=  0.380501                   pb=       0.8 V        
+        cjsw=2.37186e-10 f/m             mjsw=  0.107791          
+         php=       0.8 V               pbsw (not used)           
+      cjgate=2.37186e-10 f/m            cjswg (not used)           
+       mjswg (not used)                 pbswg (not used)           
+       lketa=-0.00944713               wketa= 0.00500085         
+       pketa=-0.00308008               pvth0=-0.000919017         
+         pk2=0.000320258               peta0=9.33065e-05         
+         pu0=    32.7094                 pua=1.35883e-10         
+       pvsat=    2004.06               prdsw=         -5         
+ 
+
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+ ******
+ .title hw4_p1
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+ x
+
+ volt         gmo       
+             m1         
+    0.          2.3458n 
+   10.00000m    3.0694n 
+   20.00000m    4.0157n 
+   30.00000m    5.2533n 
+   40.00000m    6.8716n 
+   50.00000m    8.9871n 
+   60.00000m   11.7521n 
+   70.00000m   15.3653n 
+   80.00000m   20.0854n 
+   90.00000m   26.2496n 
+  100.00000m   34.2969n 
+  110.00000m   44.7984n 
+  120.00000m   58.4964n 
+  130.00000m   76.3545n 
+  140.00000m   99.6228n 
+  150.00000m  129.9202n 
+  160.00000m  169.3410n 
+  170.00000m  220.5899n 
+  180.00000m  287.1538n 
+  190.00000m  373.5193n 
+  200.00000m  485.4473n 
+  210.00000m  630.3174n 
+  220.00000m  817.5592n 
+  230.00000m    1.0592u 
+  240.00000m    1.3705u 
+  250.00000m    1.7708u 
+  260.00000m    2.2845u 
+  270.00000m    2.9425u 
+  280.00000m    3.7834u 
+  290.00000m    4.8556u 
+  300.00000m    6.2196u 
+  310.00000m    7.9510u 
+  320.00000m   10.1438u 
+  330.00000m   12.9151u 
+  340.00000m   16.4103u 
+  350.00000m   20.8105u 
+  360.00000m   26.3398u 
+  370.00000m   33.2758u 
+  380.00000m   41.9601u 
+  390.00000m   52.8092u 
+  400.00000m   66.3255u 
+  410.00000m   83.1044u 
+  420.00000m  103.8355u 
+  430.00000m  129.2960u 
+  440.00000m  160.3299u 
+  450.00000m  197.8140u 
+  460.00000m  242.6087u 
+  470.00000m  295.4951u 
+  480.00000m  357.1068u 
+  490.00000m  427.8606u 
+  500.00000m  507.8990u 
+  510.00000m  597.0521u 
+  520.00000m  694.8258u 
+  530.00000m  800.4193u 
+  540.00000m  912.7701u 
+  550.00000m    1.0306m 
+  560.00000m    1.1526m 
+  570.00000m    1.2773m 
+  580.00000m    1.4033m 
+  590.00000m    1.5295m 
+  600.00000m    1.6546m 
+  610.00000m    1.7778m 
+  620.00000m    1.8983m 
+  630.00000m    2.0156m 
+  640.00000m    2.1293m 
+  650.00000m    2.2392m 
+  660.00000m    2.3452m 
+  670.00000m    2.4473m 
+  680.00000m    2.5458m 
+  690.00000m    2.6406m 
+  700.00000m    2.7321m 
+  710.00000m    2.8204m 
+  720.00000m    2.9059m 
+  730.00000m    2.9887m 
+  740.00000m    3.0691m 
+  750.00000m    3.1473m 
+  760.00000m    3.2235m 
+  770.00000m    3.2978m 
+  780.00000m    3.3705m 
+  790.00000m    3.4416m 
+  800.00000m    3.5112m 
+  810.00000m    3.5796m 
+  820.00000m    3.6466m 
+  830.00000m    3.7123m 
+  840.00000m    3.7769m 
+  850.00000m    3.8402m 
+  860.00000m    3.9022m 
+  870.00000m    3.9628m 
+  880.00000m    4.0220m 
+  890.00000m    4.0796m 
+  900.00000m    4.1354m 
+  910.00000m    4.1890m 
+  920.00000m    4.2400m 
+  930.00000m    4.2875m 
+  940.00000m    4.3307m 
+  950.00000m    4.3676m 
+  960.00000m    4.3957m 
+  970.00000m    4.4103m 
+  980.00000m    4.4058m 
+  990.00000m    4.3708m 
+    1.00000     4.2966m 
+    1.01000     4.1821m 
+    1.02000     4.0397m 
+    1.03000     3.8872m 
+    1.04000     3.7370m 
+    1.05000     3.5952m 
+    1.06000     3.4634m 
+    1.07000     3.3416m 
+    1.08000     3.2288m 
+    1.09000     3.1242m 
+    1.10000     3.0267m 
+    1.11000     2.9323m 
+    1.12000     2.8472m 
+    1.13000     2.7671m 
+    1.14000     2.6913m 
+    1.15000     2.6194m 
+    1.16000     2.5511m 
+    1.17000     2.4861m 
+    1.18000     2.4240m 
+    1.19000     2.3647m 
+    1.20000     2.3078m 
+    1.21000     2.2533m 
+    1.22000     2.2008m 
+    1.23000     2.1504m 
+    1.24000     2.1018m 
+    1.25000     2.0549m 
+    1.26000     2.0096m 
+    1.27000     1.9659m 
+    1.28000     1.9235m 
+    1.29000     1.8825m 
+    1.30000     1.8428m 
+    1.31000     1.8042m 
+    1.32000     1.7668m 
+    1.33000     1.7305m 
+    1.34000     1.6952m 
+    1.35000     1.6608m 
+    1.36000     1.6274m 
+    1.37000     1.5948m 
+    1.38000     1.5631m 
+    1.39000     1.5322m 
+    1.40000     1.5021m 
+    1.41000     1.4727m 
+    1.42000     1.4440m 
+    1.43000     1.4160m 
+    1.44000     1.3886m 
+    1.45000     1.3619m 
+    1.46000     1.3358m 
+    1.47000     1.3102m 
+    1.48000     1.2853m 
+    1.49000     1.2608m 
+    1.50000     1.2369m 
+    1.51000     1.2135m 
+    1.52000     1.1906m 
+    1.53000     1.1681m 
+    1.54000     1.1461m 
+    1.55000     1.1246m 
+    1.56000     1.1034m 
+    1.57000     1.0827m 
+    1.58000     1.0624m 
+    1.59000     1.0425m 
+    1.60000     1.0229m 
+    1.61000     1.0038m 
+    1.62000   984.9621u 
+    1.63000   966.4990u 
+    1.64000   948.3749u 
+    1.65000   930.5807u 
+    1.66000   913.1078u 
+    1.67000   895.9475u 
+    1.68000   879.0920u 
+    1.69000   862.5335u 
+    1.70000   846.2645u 
+    1.71000   830.2779u 
+    1.72000   814.5668u 
+    1.73000   799.1246u 
+    1.74000   783.9448u 
+    1.75000   769.0213u 
+    1.76000   754.3481u 
+    1.77000   739.9196u 
+    1.78000   725.7302u 
+    1.79000   711.7744u 
+    1.80000   698.0472u 
+y
+ x
+
+ volt         current   
+             m1         
+    0.         90.7837p 
+   10.00000m  117.6980p 
+   20.00000m  152.9121p 
+   30.00000m  198.9811p 
+   40.00000m  259.2445p 
+   50.00000m  338.0661p 
+   60.00000m  441.1462p 
+   70.00000m  575.9292p 
+   80.00000m  752.1330p 
+   90.00000m  982.4388p 
+  100.00000m    1.2834n 
+  110.00000m    1.6765n 
+  120.00000m    2.1900n 
+  130.00000m    2.8603n 
+  140.00000m    3.7351n 
+  150.00000m    4.8761n 
+  160.00000m    6.3638n 
+  170.00000m    8.3023n 
+  180.00000m   10.8265n 
+  190.00000m   14.1112n 
+  200.00000m   18.3819n 
+  210.00000m   23.9297n 
+  220.00000m   31.1291n 
+  230.00000m   40.4617n 
+  240.00000m   52.5444n 
+  250.00000m   68.1670n 
+  260.00000m   88.3368n 
+  270.00000m  114.3363n 
+  280.00000m  147.7936n 
+  290.00000m  190.7707n 
+  300.00000m  245.8715n 
+  310.00000m  316.3776n 
+  320.00000m  406.4143n 
+  330.00000m  521.1574n 
+  340.00000m  667.0898n 
+  350.00000m  852.3179n 
+  360.00000m    1.0870u 
+  370.00000m    1.3836u 
+  380.00000m    1.7581u 
+  390.00000m    2.2297u 
+  400.00000m    2.8225u 
+  410.00000m    3.5661u 
+  420.00000m    4.4963u 
+  430.00000m    5.6563u 
+  440.00000m    7.0973u 
+  450.00000m    8.8791u 
+  460.00000m   11.0699u 
+  470.00000m   13.7461u 
+  480.00000m   16.9911u 
+  490.00000m   20.8929u 
+  500.00000m   25.5424u 
+  510.00000m   31.0297u 
+  520.00000m   37.4413u 
+  530.00000m   44.8567u 
+  540.00000m   53.3459u 
+  550.00000m   62.9669u 
+  560.00000m   73.7642u 
+  570.00000m   85.7686u 
+  580.00000m   98.9967u 
+  590.00000m  113.4523u 
+  600.00000m  129.1278u 
+  610.00000m  146.0054u 
+  620.00000m  164.0594u 
+  630.00000m  183.2582u 
+  640.00000m  203.5659u 
+  650.00000m  224.9440u 
+  660.00000m  247.3528u 
+  670.00000m  270.7525u 
+  680.00000m  295.1043u 
+  690.00000m  320.3709u 
+  700.00000m  346.5167u 
+  710.00000m  373.5086u 
+  720.00000m  401.3155u 
+  730.00000m  429.9089u 
+  740.00000m  459.2624u 
+  750.00000m  489.3515u 
+  760.00000m  520.1539u 
+  770.00000m  551.6485u 
+  780.00000m  583.8159u 
+  790.00000m  616.6375u 
+  800.00000m  650.0956u 
+  810.00000m  684.1729u 
+  820.00000m  718.8519u 
+  830.00000m  754.1152u 
+  840.00000m  789.9441u 
+  850.00000m  826.3190u 
+  860.00000m  863.2178u 
+  870.00000m  900.6156u 
+  880.00000m  938.4831u 
+  890.00000m  976.7852u 
+  900.00000m    1.0155m 
+  910.00000m    1.0545m 
+  920.00000m    1.0938m 
+  930.00000m    1.1332m 
+  940.00000m    1.1727m 
+  950.00000m    1.2120m 
+  960.00000m    1.2508m 
+  970.00000m    1.2887m 
+  980.00000m    1.3251m 
+  990.00000m    1.3590m 
+    1.00000     1.3894m 
+    1.01000     1.4157m 
+    1.02000     1.4377m 
+    1.03000     1.4561m 
+    1.04000     1.4716m 
+    1.05000     1.4849m 
+    1.06000     1.4965m 
+    1.07000     1.5068m 
+    1.08000     1.5159m 
+    1.09000     1.5242m 
+    1.10000     1.5317m 
+    1.11000     1.5376m 
+    1.12000     1.5441m 
+    1.13000     1.5500m 
+    1.14000     1.5556m 
+    1.15000     1.5608m 
+    1.16000     1.5657m 
+    1.17000     1.5703m 
+    1.18000     1.5746m 
+    1.19000     1.5786m 
+    1.20000     1.5825m 
+    1.21000     1.5862m 
+    1.22000     1.5896m 
+    1.23000     1.5929m 
+    1.24000     1.5961m 
+    1.25000     1.5991m 
+    1.26000     1.6020m 
+    1.27000     1.6047m 
+    1.28000     1.6074m 
+    1.29000     1.6099m 
+    1.30000     1.6124m 
+    1.31000     1.6147m 
+    1.32000     1.6169m 
+    1.33000     1.6191m 
+    1.34000     1.6212m 
+    1.35000     1.6232m 
+    1.36000     1.6251m 
+    1.37000     1.6270m 
+    1.38000     1.6288m 
+    1.39000     1.6305m 
+    1.40000     1.6322m 
+    1.41000     1.6339m 
+    1.42000     1.6354m 
+    1.43000     1.6370m 
+    1.44000     1.6384m 
+    1.45000     1.6399m 
+    1.46000     1.6413m 
+    1.47000     1.6426m 
+    1.48000     1.6439m 
+    1.49000     1.6452m 
+    1.50000     1.6464m 
+    1.51000     1.6476m 
+    1.52000     1.6488m 
+    1.53000     1.6499m 
+    1.54000     1.6510m 
+    1.55000     1.6520m 
+    1.56000     1.6531m 
+    1.57000     1.6541m 
+    1.58000     1.6551m 
+    1.59000     1.6560m 
+    1.60000     1.6569m 
+    1.61000     1.6578m 
+    1.62000     1.6587m 
+    1.63000     1.6596m 
+    1.64000     1.6604m 
+    1.65000     1.6612m 
+    1.66000     1.6620m 
+    1.67000     1.6628m 
+    1.68000     1.6635m 
+    1.69000     1.6642m 
+    1.70000     1.6649m 
+    1.71000     1.6656m 
+    1.72000     1.6663m 
+    1.73000     1.6670m 
+    1.74000     1.6676m 
+    1.75000     1.6682m 
+    1.76000     1.6689m 
+    1.77000     1.6694m 
+    1.78000     1.6700m 
+    1.79000     1.6706m 
+    1.80000     1.6711m 
+y
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- K-2015.06-SP1 linux64 (Aug 23 2015) ******                    
+ ******  
+ .title hw4_p1
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:vdd     =   1.8000  0:vg      =   1.0000  0:vout    = 410.5806m
+
+
+ **** voltage sources
+
+ subckt                        
+ element  0:v1       0:vin     
+  volts      1.8000     1.0000 
+  current   -1.3894m    0.     
+  power      2.5010m    0.     
+
+     total voltage source power dissipation=    2.5010m       watts
+
+
+
+ **** resistors
+
+ subckt             
+ element  0:r1      
+  r value    1.0000k
+  v drop     1.3894 
+  current    1.3894m
+  power      1.9305m
+
+
+
+ **** mosfets
+
+
+ subckt             
+ element  0:m1      
+ model    0:n_18    
+ region       Linear
+  id         1.3894m
+  ibs        0.     
+  ibd        0.     
+  vgs        1.0000 
+  vds      410.5806m
+  vbs        0.     
+  vth      459.7135m
+  vdsat    365.5745m
+  vod      540.2865m
+  beta      14.6300m
+  gam eff  594.4165m
+  gm         4.2966m
+  gds      512.7750u
+  gmb        1.1522m
+  cdtot    492.6067p
+  cgtot    125.1850f
+  cstot    576.4518p
+  cbtot      1.0690n
+  cgs      101.3509f
+  cgd       19.9839f
+
+
+
+
+          ***** job concluded
+1****** HSPICE -- K-2015.06-SP1 linux64 (Aug 23 2015) ******                    
+ ******  
+ .title hw4_p1
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E3-1230 v5 @ 3.40GHz
+ cpu MHz	: 1587.109
+  
+ OS:
+ Linux version 3.10.0-327.28.3.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) ) #1 SMP Thu Aug 18 19:05:49 UTC 2016
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       4 # elements   =       4
+  # resistors   =       1 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       2
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       1 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.02           1           7
+  dc sweep           0.00         181         378
+  ac analysis        0.00          91          91
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        207.43 megabytes
+           total cpu time            0.02 seconds
+           total elapsed time        0.06 seconds
+           job started at     16:04:37 11/15/2016
+           job ended   at     16:04:37 11/15/2016
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.03(s)

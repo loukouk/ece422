@@ -1,0 +1,207 @@
+ScopeSigMgr:loadpffile /nfs/stak/students/m/morriluk/ece422/hw4_p3a/hw4_p3a.sw0 1 openonly
+# PF:1
+wm geometry .sigmgr._PF:1 231x341+949+592
+wm geometry .sigmgr._PF:1 231x341+945+592
+wm geometry .sigmgr._PF:1 231x341+940+592
+wm geometry .sigmgr._PF:1 231x341+909+592
+wm geometry .sigmgr._PF:1 231x341+826+584
+wm geometry .sigmgr._PF:1 231x341+764+574
+wm geometry .sigmgr._PF:1 231x341+702+564
+wm geometry .sigmgr._PF:1 231x341+660+554
+wm geometry .sigmgr._PF:1 231x341+608+550
+wm geometry .sigmgr._PF:1 231x341+578+550
+wm geometry .sigmgr._PF:1 231x341+567+550
+wm geometry .sigmgr._PF:1 231x341+564+550
+wm geometry .sigmgr._PF:1 231x341+563+550
+wm geometry .sigmgr._PF:1 231x341+562+550
+wm geometry .sigmgr._PF:1 231x341+560+550
+wm geometry .sigmgr._PF:1 231x341+559+533
+wm geometry .sigmgr._PF:1 231x341+557+529
+wm geometry .sigmgr._PF:1 231x341+557+527
+wm geometry .sigmgr._PF:1 231x341+557+526
+wm geometry .sigmgr._PF:1 231x341+557+523
+wm geometry .sigmgr._PF:1 231x341+558+519
+wm geometry .sigmgr._PF:1 231x341+561+514
+wm geometry .sigmgr._PF:1 231x341+564+508
+wm geometry .sigmgr._PF:1 231x341+568+499
+wm geometry .sigmgr._PF:1 231x341+572+488
+wm geometry .sigmgr._PF:1 231x341+575+479
+wm geometry .sigmgr._PF:1 231x341+579+472
+wm geometry .sigmgr._PF:1 231x341+582+467
+wm geometry .sigmgr._PF:1 231x341+583+465
+wm geometry .sigmgr._PF:1 231x341+584+463
+wm geometry .sigmgr._PF:1 231x341+585+461
+wm geometry .sigmgr._PF:1 231x341+586+459
+wm geometry .sigmgr._PF:1 231x341+589+454
+wm geometry .sigmgr._PF:1 231x341+591+448
+wm geometry .sigmgr._PF:1 231x341+592+446
+AimCalc
+AimBarItem:Hide .aimCalc
+wm withdraw .aimCalcConstForm
+wm geometry .aimCalc 310x303+342+437
+AimBarItem:Show .aimCalc
+wm geometry .aimCalc 310x303+581+394
+wm geometry .aimCalc 310x303+572+388
+wm geometry .aimCalc 310x303+572+390
+wm geometry .aimCalc 310x303+572+392
+wm geometry .aimCalc 310x303+531+401
+wm geometry .aimCalc 310x303+490+415
+wm geometry .aimCalc 310x303+444+429
+wm geometry .aimCalc 310x303+392+446
+wm geometry .aimCalc 310x303+327+472
+wm geometry .aimCalc 310x303+281+486
+wm geometry .aimCalc 310x303+245+498
+wm geometry .aimCalc 310x303+221+505
+wm geometry .aimCalc 310x303+207+508
+wm geometry .aimCalc 310x303+204+510
+wm geometry .aimCalc 310x303+203+511
+wm geometry .aimCalc 310x303+202+511
+wm geometry .aimCalc 310x303+201+512
+wm geometry .aimCalc 310x303+199+513
+wm geometry .aimCalc 310x303+196+514
+wm geometry .aimCalc 310x303+192+517
+wm geometry .aimCalc 310x303+190+521
+wm geometry .aimCalc 310x303+189+523
+wm geometry .aimCalc 310x303+188+525
+wm geometry .aimCalc 310x303+187+526
+wm geometry .aimCalc 310x303+186+527
+wm geometry .aimCalc 310x303+181+527
+wm geometry .aimCalc 310x303+177+525
+wm geometry .aimCalc 310x303+173+524
+wm geometry .aimCalc 310x303+170+522
+wm geometry .aimCalc 310x303+165+518
+wm geometry .aimCalc 310x303+161+514
+wm geometry .aimCalc 310x303+159+512
+wm geometry .aimCalc 310x303+157+511
+wm geometry .aimCalc 310x303+155+510
+wm geometry .aimCalc 310x303+153+508
+wm geometry .aimCalc 310x303+152+507
+wm geometry .aimCalc 310x303+149+504
+wm geometry .aimCalc 310x303+147+502
+wm geometry .aimCalc 310x303+145+500
+wm geometry .aimCalc 310x303+144+499
+wm geometry .aimCalc 310x303+143+499
+wm geometry .aimCalc 310x303+142+499
+wm geometry .aimCalc 310x303+141+499
+wm geometry .aimCalc 310x303+140+500
+wm geometry .aimCalc 310x303+139+501
+wm geometry .aimCalc 310x303+139+502
+wm geometry .aimCalc 310x303+139+503
+wm geometry .aimCalc 310x303+138+504
+wm geometry .aimCalc 310x303+137+505
+wm geometry .aimCalc 310x303+136+506
+AimCalc:Enter v(vds)
+AimCalc:ClearX
+AimCalc:ClearX
+pf:read PF:1 v(vds)
+# WF:1:1
+AimCalc:Enter {}
+AimCalc:Enter {WF:1:1 }
+AimCalc:DoFunc deriv yes
+# WF:2:1
+pf:read PF:1 i(m1)
+# WF:1:2
+AimCalc:Enter {WF:1:2 }
+AimCalc:DoFunc deriv yes
+# WF:3:1
+AimCalc:DoFunc divide yes
+# WF:4:1
+AimCalc:Enter {WF:4:1 }
+AimCalc:GraphWaveform
+# Signal0
+wm geometry .aimCalc 310x303+137+506
+wm geometry .aimCalc 310x303+142+506
+wm geometry .aimCalc 310x303+149+511
+wm geometry .aimCalc 310x303+154+515
+wm geometry .aimCalc 310x303+166+527
+wm geometry .aimCalc 310x303+177+541
+wm geometry .aimCalc 310x303+188+554
+wm geometry .aimCalc 310x303+197+567
+wm geometry .aimCalc 310x303+206+576
+wm geometry .aimCalc 310x303+219+597
+wm geometry .aimCalc 310x303+228+615
+wm geometry .aimCalc 310x303+238+633
+wm geometry .aimCalc 310x303+247+649
+wm geometry .aimCalc 310x303+252+661
+wm geometry .aimCalc 310x303+257+673
+wm geometry .aimCalc 310x303+266+689
+wm geometry .aimCalc 310x303+275+706
+wm geometry .aimCalc 310x303+280+717
+wm geometry .aimCalc 310x303+280+720
+wm geometry .aimCalc 310x303+280+721
+wm geometry .aimCalc 310x303+280+722
+wm geometry .aimCalc 310x303+299+719
+wm geometry .aimCalc 310x303+306+715
+wm geometry .aimCalc 310x303+313+710
+wm geometry .aimCalc 310x303+319+707
+wm geometry .aimCalc 310x303+322+705
+wm geometry .aimCalc 310x303+326+703
+wm geometry .aimCalc 310x303+328+697
+wm geometry .aimCalc 310x303+329+690
+wm geometry .aimCalc 310x303+329+682
+wm geometry .aimCalc 310x303+328+676
+wm geometry .aimCalc 310x303+326+674
+wm geometry .aimCalc 310x303+322+674
+wm geometry .aimCalc 310x303+317+674
+wm geometry .aimCalc 310x303+308+673
+wm geometry .aimCalc 310x303+294+671
+wm geometry .aimCalc 310x303+278+670
+wm geometry .aimCalc 310x303+260+666
+wm geometry .aimCalc 310x303+242+665
+wm geometry .aimCalc 310x303+227+663
+wm geometry .aimCalc 310x303+219+663
+wm geometry .aimCalc 310x303+218+663
+wm geometry .aimCalc 310x303+217+663
+wm geometry .sigmgr._PF:1 231x341+594+448
+wm geometry .sigmgr._PF:1 231x341+594+450
+wm geometry .sigmgr._PF:1 231x341+595+454
+wm geometry .sigmgr._PF:1 231x341+599+482
+wm geometry .sigmgr._PF:1 231x341+603+520
+wm geometry .sigmgr._PF:1 231x341+608+558
+wm geometry .sigmgr._PF:1 231x341+613+594
+wm geometry .sigmgr._PF:1 231x341+617+635
+wm geometry .sigmgr._PF:1 231x341+617+661
+wm geometry .sigmgr._PF:1 231x341+617+687
+wm geometry .sigmgr._PF:1 231x341+612+705
+wm geometry .sigmgr._PF:1 231x341+609+720
+wm geometry .sigmgr._PF:1 231x341+607+733
+wm geometry .sigmgr._PF:1 231x341+604+741
+wm geometry .sigmgr._PF:1 231x341+602+747
+wm geometry .sigmgr._PF:1 231x341+598+757
+wm geometry .sigmgr._PF:1 231x341+595+768
+wm geometry .sigmgr._PF:1 231x341+592+777
+wm geometry .sigmgr._PF:1 231x341+589+777
+wm geometry .sigmgr._PF:1 231x341+590+777
+wm geometry .sigmgr._PF:1 231x341+589+777
+wm geometry .sigmgr._PF:1 231x341+588+777
+wm geometry .sigmgr 376x204+508+195
+wm geometry .sigmgr 376x204+510+195
+wm geometry .sigmgr 376x204+527+209
+wm geometry .sigmgr 376x204+539+218
+wm geometry .sigmgr 376x204+567+236
+wm geometry .sigmgr 376x204+626+263
+wm geometry .sigmgr 376x204+668+281
+wm geometry .sigmgr 376x204+710+303
+wm geometry .sigmgr 376x204+760+333
+wm geometry .sigmgr 376x204+812+375
+wm geometry .sigmgr 376x204+868+419
+wm geometry .sigmgr 376x204+914+459
+wm geometry .sigmgr 376x204+951+489
+wm geometry .sigmgr 376x204+978+509
+wm geometry .sigmgr 376x204+994+525
+wm geometry .sigmgr 376x204+1003+536
+wm geometry .sigmgr 376x204+1007+545
+wm geometry .sigmgr 376x204+1013+557
+wm geometry .sigmgr 376x204+1015+565
+wm geometry .sigmgr 376x204+1018+570
+wm geometry .sigmgr 376x204+1021+578
+wm geometry .sigmgr 376x204+1030+609
+wm geometry .sigmgr 376x204+1050+651
+wm geometry .sigmgr 376x204+1068+689
+wm geometry .sigmgr 376x204+1084+711
+wm geometry .sigmgr 376x204+1089+716
+Mdi:Resize 771 450
+Mdi:Move 5 5
+Mdi:Resize 823 461
+Mdi:Move 5 5
+.frame1.mdi.mdi1.work.graph0 save -file /nfs/stak/students/m/morriluk/ece422/hw4_p3a/rds_vs_vds.png -format png  -x 0 -y 0 -w 821 -h 457 -colormode color
